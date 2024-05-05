@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- 
+       Episodio 9:
+       - border: width, color, style, radius
+       - divide: width, color, style,
+       - outline: width, color, style, offset 
+       - ring: width, color, offset width e color
+     -->
+
+    <div class =  'w-[300px] h-[300px] bg-slate-200 rounded-tr-3xl rounded-br-3xl'> </div> 
+    <!-- 1. border-[1,2,3 ecc.. indicano il valore in px] allo stesso tempo si possono fare dei 
+         valori customizzati -[2px] 
+         2. per lo stile: border-[dotted,slashed,double]
+         3. per il border-radius: rounded-[t(top),b(bottom),l(left),r(right), tl, tr]-[xl]
+    -->
+
+    <div class = 'grid grid-cols-3 divide-x-2 divide-red-400 divide-dotted'>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <!-- 1. per il per la direzione del divide: divide-[x,y(verticale)]
+         2. per lo stile: divide-[dotted,dashed,doubled]
+    -->
+    <button class = 'w-[70px] bg-slate-500 outline outline-8 outline-offset-2'>Cliccami</button>
+    <!-- Diff tra ring e outline:
+        1. outline per lo stile: outline-[solid, dotted, dashed, doubled]
+        2. per outline-offset: outline-offset-[num]
+        3. per lo spessore outline-[num] in px
+        Ring:
+        1. per il ring il valore predefinito è lo spessore non lo stile come per outline
+        2. il ring viene creato come shadow a diff dall'outline
+    -->
+    <button class = 'w-[70px] bg-slate-500 ring-8 ring-red-500 ring-offset-yellow-500'>Cliccami</button>
+</body>
+</html>
